@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="slideshow.css" />
+  <title>スライドショー</title>
+</head>
+
+<body>
+  <img src="./img/cosmos01.jpg" id="main" />
+
+  <div id="thumbArea">
+    <img src="./img/cosmos01.jpg" class="thumb select" onclick="showimage(0)" />
+    <img src="./img/cosmos02.jpg" class="thumb" onclick="showimage(1)" />
+    <img src="./img/cosmos03.jpg" class="thumb" onclick="showimage(2)" />
+    <img src="./img/cosmos04.jpg" class="thumb" onclick="showimage(3)" />
+    <img src="./img/cosmos05.jpg" class="thumb" onclick="showimage(4)" />
+    <img src="./img/cosmos07.jpg" class="thumb" onclick="showimage(5)" />
+    <img src="./img/cosmos08.jpg" class="thumb" onclick="showimage(6)" />
+    <img src="./img/cosmos09.jpg" class="thumb" onclick="showimage(7)" />
+  </div>
+
+  <div id="buttons">
+    <button type="button" id="buttonStart" onclick="startSlideShow()">
+        <img src="./img/start.png" width="30px"/>
+      </button>
+    <button type="button" id="buttonPause" onclick="pauseSlideShow()">
+        <img src="./img/pause.png" width="30px"/>
+      </button>
+    <button type="button" id="buttonStop" onclick="stopSlideShow()">
+        <img src="./img/stop.png" width="30px"/>
+      </button> volume [0.0 - 1.0]:
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="1" onchange="changeVolume()" />
+  </div>
+
+  <audio id="audio" loop>
+      <sourse src="./music/Morning.mp3"></sourse>
+      <source src="./music/Morning.mp3"></source>
+    </audio>
+  <script src="slideshow.js"></script>
+</body>
+
+</html>
